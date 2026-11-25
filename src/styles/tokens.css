@@ -1,0 +1,35 @@
+/* Design tokens — ux-spec §3.9. Light default, dark via prefers-color-scheme, manual override via [data-theme]. */
+:root {
+  color-scheme: light dark;
+  --skill-listening:#0B6BCB; --skill-reading:#0F7B5F; --skill-writing:#C2410C; --skill-speaking:#B4237A;
+  --skill-grammar:#6D3FD0;   --skill-vocabulary:#8A6100; --skill-test:#BE1E2D;   --skill-rest:#5B6B7B;
+  --bg:#F2F2F7; --surface:#FFFFFF; --surface-2:#F2F2F7; --separator:rgba(198,198,200,.6);
+  --label:#000; --label-2:#5C5C61; --accent:#0B5FD6; --on-accent:#fff;
+  --success:#1E7A3C; --warning:#9A5B00; --danger:#C4271B;
+  --on-skill:#FFFFFF; --tint-pct:12%;
+  --r-card:16px; --r-btn:14px; --r-input:12px; --r-pill:999px; --r-tile:10px;
+  --s-1:4px; --s-2:8px; --s-3:12px; --s-4:16px; --s-5:20px; --s-6:24px; --s-8:32px; --s-10:40px;
+  --tabbar-h:49px; --hit:44px;
+  --safe-t:env(safe-area-inset-top); --safe-b:env(safe-area-inset-bottom);
+  --safe-l:env(safe-area-inset-left); --safe-r:env(safe-area-inset-right);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --skill-listening:#6CB4FF; --skill-reading:#4CD2A8; --skill-writing:#FF9A62; --skill-speaking:#FF84CC;
+    --skill-grammar:#B79BFF;   --skill-vocabulary:#F2C14E; --skill-test:#FF8A8F;   --skill-rest:#9FB0C0;
+    --bg:#000; --surface:#1C1C1E; --surface-2:#2C2C2E; --separator:#38383A;
+    --label:#fff; --label-2:#A1A1A8; --accent:#6CB4FF; --on-accent:#0A0A0A;
+    --success:#5BD98A; --warning:#FFC247; --danger:#FF6B61;
+    --on-skill:#0A0A0A; --tint-pct:22%;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --skill-listening:#6CB4FF; --skill-reading:#4CD2A8; --skill-writing:#FF9A62; --skill-speaking:#FF84CC;
+  --skill-grammar:#B79BFF;   --skill-vocabulary:#F2C14E; --skill-test:#FF8A8F;   --skill-rest:#9FB0C0;
+  --bg:#000; --surface:#1C1C1E; --surface-2:#2C2C2E; --separator:#38383A;
+  --label:#fff; --label-2:#A1A1A8; --accent:#6CB4FF; --on-accent:#0A0A0A;
+  --success:#5BD98A; --warning:#FFC247; --danger:#FF6B61;
+  --on-skill:#0A0A0A; --tint-pct:22%;
+}
+:root[data-theme="light"] { color-scheme: light; }
