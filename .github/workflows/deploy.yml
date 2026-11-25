@@ -1,3 +1,4 @@
+# Builds, tests and deploys the PWA to GitHub Pages on every push to main.
 name: Deploy to GitHub Pages
 
 on:
